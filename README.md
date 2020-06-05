@@ -17,12 +17,12 @@ Shell script outputs the following files for 3 CNN model architecture - Resnet, 
 * alexnet_uploaded-images.txt - that contains the results using CNN model architecture AlexNet
 * vgg_uploaded-images.txt - that contains the results using CNN model architecture VGG
 
-The three model architectures classify the breed of Dog(Dog_01.jpg) as correct breed - Golden retriever.
-The three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg.
-The three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg as not dogs.
+* The three model architectures classify the breed of Dog(Dog_01.jpg) as correct breed - Golden retriever.
+* The three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg.
+* The three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg as not dogs.
 
 | Architecture | #1 | #2 | #3 |
-| : --- : | : --- : | : --- : |
+| :---: | :---: | :---: |
 | Alexnet | 75 | 100 | 100 |
 
 
