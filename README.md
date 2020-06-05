@@ -39,10 +39,21 @@ Resnet architecture is best at classsifying uploaded images considering percenta
 
 ## Final results of classifying Dogs
 
-In this project we had 2 main objectives:
-* Identifying which pet images are of dogs and which pet images aren't of dogs
-* Classifying the breeds of dogs, for the images that are of dogs
+Results Table
 
+| # Total Images     | 40 |
+| ------------------ | -- |
+| # Dog Images       | 30 |
+| # Not-a-Dog Images | 10 |
 
+| CNN Model Architecture | % Not a dog correct | % Dogs correct | % Breeds correct | % Match Labels |
+| ---------------------- | ------------------- | -------------- | ---------------- | -------------- |
+| Alexnet                |        100.0 %      |      100.0 %   |        50.0 %    |      52.5 %    |
+| Resnet                 |         90.0 %      |      100.0 %   |        56.6 %    |      57.5 %    |
+| VGG                    |        100.0 %      |      100.0 %   |        60.0 %    |      62.5 %    |
 
+In this project there are 2 main objectives:
+* Identifying which pet images are of dogs and which pet images aren't of dogs - VGG and Alexnet correctly identify the images of "dog" and "not-dogs" 100% of the time
+* Classifying the breeds of dogs, for the images that are of dogs - VGG provides better solution than other architectures because it classifies the correct breed of dog over 60% of the time.
 
+Based on results, the "best" model architecture is VGG. VGG is able to classify "dogs" and "not-dogs" with 100% accuracy and classifies correct breed of dog with 60% accuracy.
