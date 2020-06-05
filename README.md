@@ -21,9 +21,9 @@ Shell script outputs the following files for 3 CNN model architecture - Resnet, 
 * The three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg.
 * The three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg as not dogs.
 
-| Architecture | #1 | #2 | #3 |
-| :---: | :---: | :---: |
-| Alexnet | 75 | 100 | 100 |
+| Architecture | 900 | 900 |
+| ------------ | --- | --- |
+| Alexnet      | 75  | 100 |
 
 
 
