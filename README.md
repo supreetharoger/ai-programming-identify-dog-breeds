@@ -17,13 +17,32 @@ Shell script outputs the following files for 3 CNN model architecture - Resnet, 
 * alexnet_uploaded-images.txt - that contains the results using CNN model architecture AlexNet
 * vgg_uploaded-images.txt - that contains the results using CNN model architecture VGG
 
+Outcome of classification
 * The three model architectures classify the breed of Dog(Dog_01.jpg) as correct breed - Golden retriever.
 * The three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg.
 * The three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg as not dogs.
 
-| Architecture | 900 | 900 |
-| ------------ | --- | --- |
-| Alexnet      | 75  | 100 |
+Results Table
+
+| # Total Images     | 4 |
+| ------------------ | - |
+| # Dog Images       | 2 |
+| # Not-a-Dog Images | 2 |
+
+| CNN Model Architecture | % Not a dog correct | % Dogs correct | % Breeds correct | % Match Labels |
+| ---------------------- | ------------------- | -------------- | ---------------- | -------------- |
+| Alexnet                |        100.0 %      |      100.0 %   |       100.0 %    |      75.0 %    |
+| Resnet                 |        100.0 %      |      100.0 %   |       100.0 %    |     100.0 %    |
+| VGG                    |        100.0 %      |      100.0 %   |       100.0 %    |     100.0 %    |
+
+Resnet architecture is best at classsifying uploaded images considering percentage match and runtime performance
+
+## Final results of classifying Dogs
+
+In this project we had 2 main objectives:
+* Identifying which pet images are of dogs and which pet images aren't of dogs
+* Classifying the breeds of dogs, for the images that are of dogs
+
 
 
 
