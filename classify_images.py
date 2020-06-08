@@ -70,7 +70,8 @@ def classify_images(images_dir, results_dic, model):
         if filenames_list[idx] in results_dic:
             pet_label = results_dic[filenames_list[idx]]
             image_classified = classifier(images_dir+filenames_list[idx], model)
-            if pet_label[0] in image_classified:
+            #' '.join(image_classified.split()).lower()
+            if pet_label[0] in ' '.join(image_classified.split()).lower():
                 pet_label_is_dog = 1
             else:
                 pet_label_is_dog = 0

@@ -18,6 +18,7 @@
 ##
 # Imports python modules
 from os import listdir
+import os
 
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create 
@@ -46,8 +47,9 @@ def get_pet_labels(image_dir):
     results_dic = dict()
     
     for idx in range(0, len(filenames_list), 1):
-        if filenames_list[idx] not in results_dic:
-            pet_image_label_list = filenames_list[idx].lower().split("_")
+        if not filenames_list[idx].startswith('.') and filenames_list[idx] not in results_dic:
+            filename_tuple = os.path.splitext(filenames_list[idx])
+            pet_image_label_list = filename_tuple[0].lower().split("_")
             pet_name = ""
             for word in pet_image_label_list:
                 if word.isalpha():
