@@ -47,17 +47,16 @@ def get_pet_labels(image_dir):
     results_dic = dict()
     
     for idx in range(0, len(filenames_list), 1):
-        if not filenames_list[idx].startswith('.') and filenames_list[idx] not in results_dic:
-            filename_tuple = os.path.splitext(filenames_list[idx])
-            pet_image_label_list = filename_tuple[0].lower().split("_")
-            pet_name = ""
-            for word in pet_image_label_list:
-                if word.isalpha():
-                    pet_name += word + " "
-            results_dic[filenames_list[idx]] = [pet_name.strip()]
-        else:
-            print("** Warning: Key=", filenames_list[idx], 
-               "already exists in results_dic with value =", 
-               results_dic[filenames_list[idx]])
-    
+        if not filenames_list[idx].startswith('.'):
+            if filenames_list[idx] not in results_dic:
+                filename_tuple = os.path.splitext(filenames_list[idx])
+                pet_image_label_list = filename_tuple[0].lower().split("_")
+                pet_name = ""
+                for word in pet_image_label_list:
+                    if word.isalpha():
+                        pet_name += word + " "
+                results_dic[filenames_list[idx]] = [pet_name.strip()]
+            else:
+                print("** Warning: Key=", filenames_list[idx], 
+                "already exists in results_dic with value =", results_dic[filenames_list[idx]])
     return results_dic
